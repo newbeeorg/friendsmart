@@ -1,0 +1,27 @@
+<script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+
+<a href="/signup">Sign up</a><br><br>
+<form action="/login" method="post" id="target">
+  <input type="text" name="email" placeholder="Email" />
+  <input type="password" name="password" placeholder="Password" />
+  <input type="submit" value="Login" />
+</form>
+
+<script>
+  $( "#target" ).submit(function(event){
+    event.preventDefault();
+    var jsonObj = {};
+    jsonObj.email = $("#target [name='email']").val();
+    jsonObj.password = $("#target [name='password']").val();
+    $.post("/login",jsonObj).fail(function(res){
+      var sts = res.status;
+      if(sts == 400){
+        alert("Please enter details.");
+      }else if(sts == 401){
+        alert("Password does not match.");
+      }else if(sts == 404){
+        alert("User not found.");
+      }
+    })
+  });
+</script>
