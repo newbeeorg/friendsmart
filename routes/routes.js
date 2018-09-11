@@ -34,9 +34,14 @@ module.exports = function(app,passport){
   app.post('/signup',function(req,res,next){
     passport.authenticate('local-signup',function(err,user,info){
       if(err){
-
+        res.status(500);
       }else{
         var msg = info.message;
+        if(msg == cons.accountExist){
+          res.status(409);
+        }else{
+          res.redirect('/');
+        }
         res.end();
       }
     })(req,res,next);

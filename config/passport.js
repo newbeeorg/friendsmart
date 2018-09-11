@@ -24,14 +24,14 @@ module.exports = function(passport){
         if(err){
           return done(err);
         }else if(user){
-          return done(null,false,req.flash('message','That email is already taken.'));
+          return done(null,false,req.flash('message',cons.accountExist));
         }else{
           var newUser = new User();
           newUser.local.email = email;
           newUser.local.password = newUser.generateHash(password);
           newUser.save(function(err){
             if(err){
-              throw err;
+              return done(err);
             }else{
               return done(null,newUser);
             }
