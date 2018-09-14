@@ -1,11 +1,38 @@
+ <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+<link href="/css/style.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<a href="/signup">Sign up</a><br><br>
-<form action="/login" method="post" id="target">
-  <input type="text" name="email" placeholder="Email" />
-  <input type="password" name="password" placeholder="Password" />
-  <input type="submit" value="Login" />
-</form>
+<div id="login-form-main" class="fmfullscreen_bg">
+  <div class="container modal-dialog modal-dialog-centered">
+    <div class="col-sm-12 boxsh row modal-content mx-auto">
+      <h3 class="text-center">Login</h3>
+      <br>
+      <form action="/login" method="post" id="target" class="p-3"><!--background-color: #f6f6f6 -->
+        <div class="email hovl">
+						<input placeholder="E-Mail" class="inpfoc" name="Email" purpose="text-field-icon" name="email" type="email" required="">
+						<span class="icons i1"><i class="material-icons">mail_outline</i></span>
+				</div>
+        <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <div class="email hovl">
+						<input placeholder="Password" class="inpfoc" name="Password" purpose="text-field-icon" type="password" required="">
+						<span class="icons i1"><i class="material-icons">lock_open</i></span>
+				</div>
+        <br>
+        <div><button type="submit" class="btn btn-primary subbtn">Log in</button></div>
+      </form>
+    <div class="text-center pb-5">* By logging in, you agree to our <a href="javascript:;">Terms of Use</a> and acknowledge that you read our <a href="javascript:;">Privacy Policy.</a></div>
+    <div class="text-center">
+      <div class="position-relative">Don't have a friends mart account?</div>
+      <a href="/signup" class="btn btn-link position-relative text-center">Sign up Now</a>
+    </div>
+  </div>
+  </div>
+</div>
 
 <script>
   $( "#target" ).submit(function(event){

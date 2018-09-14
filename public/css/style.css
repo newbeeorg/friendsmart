@@ -1,0 +1,87 @@
+.w100px{
+  width: 100px;
+}
+.fmfullscreen_bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url('/images/fmbgimage2.jpg');
+    background-repeat:repeat;
+  }
+.email {
+      border: none;
+      border-bottom: 1px solid #d0c5c5;
+      margin: 20px 0px;
+    }
+input[type="text"], input[type="email"], input[type="password"] {
+    width: 80%;
+    padding: 10px 15px 10px 0;
+    outline: none;
+    font-size: 14px;
+    color: #969696;
+    font-family: 'Hind', sans-serif;
+    border: none;
+    background: transparent;
+    letter-spacing: 1px;
+}
+span {
+    position: relative;
+    top: 10px;
+    left: 40px;
+    color: #b9a9a9;
+}
+.email i.fa {
+    color: #fff;
+    font-size: 16px;
+}
+.fa {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+button{
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+button:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+.pb10px{
+  padding: 0px 0px 10px;
+}
+.center-box{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    z-index:99;
+    margin:auto;
+    height:200px;
+    width:200px;
+    border:1px solid #000;
+    text-align:center;
+    line-height:200px;
+}
+.boxsh{
+  box-shadow: 2px 2px 15px #b9a9a9;
+  border: none !important;
+}
+.subbtn{
+  width: 80%;
+  margin-left: 10%;
+}
+/* input:focus{
+  border-bottom: 1px solid #0062cc;
+} */
